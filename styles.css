@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #292c34;
+    background-color: #3d0909;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 }
 
 header h1 {
-    color: #292c34;
+    color:#0a0a0a ;
     text-align: center;
     font-family: 'Indie Flower', Helvetica, sans-serif;
 }
