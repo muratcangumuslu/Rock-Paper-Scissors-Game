@@ -8,6 +8,7 @@ const rock_div = document.getElementById("rock-id");
 const paper_div = document.getElementById("paper-id");
 const scissors_div = document.getElementById("scissors-id");
 
+
 function getComputerChoice() {
     const choices = ["rock-id", "paper-id", "scissors-id"];
     const randomNumber = Math.floor(Math.random() * 3);
@@ -40,8 +41,11 @@ function draw(userChoice, computerChoice) {
     result_p.innerHTML = convertToWord(userChoice) + " equal/s " + convertToWord(computerChoice) + ", it's a draw! ";
 }
 
+
+
 function game(userChoice) {
-    const computerChoice = getComputerChoice();
+    const computerChoice = getComputerChoice();;
+    if (userScore == 5 || computerScore == 5) alert("The game has ended, refresh the page to play again!");
     switch (userChoice + computerChoice) {
         case "rock-idscissors-id":
         case "paper-idrock-id":
@@ -59,7 +63,6 @@ function game(userChoice) {
             draw(userChoice, computerChoice);
             break;
     }
-
 }
 
 
