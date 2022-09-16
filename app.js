@@ -46,22 +46,24 @@ function draw(userChoice, computerChoice) {
 function game(userChoice) {
     const computerChoice = getComputerChoice();;
     if (userScore == 5 || computerScore == 5) alert("The game has ended, refresh the page to play again!");
-    switch (userChoice + computerChoice) {
-        case "rock-idscissors-id":
-        case "paper-idrock-id":
-        case "scissors-idpaper-id":
-            win(userChoice, computerChoice);
-            break;
-        case "rock-idpaper-id":
-        case "paper-idscissors-id":
-        case "scissors-idrock-id":
-            lose(userChoice, computerChoice);
-            break;
-        case "rock-idrock-id":
-        case "paper-idpaper-id":
-        case "scissors-idscissors-id":
-            draw(userChoice, computerChoice);
-            break;
+    else {
+        switch (userChoice + computerChoice) {
+            case "rock-idscissors-id":
+            case "paper-idrock-id":
+            case "scissors-idpaper-id":
+                win(userChoice, computerChoice);
+                break;
+            case "rock-idpaper-id":
+            case "paper-idscissors-id":
+            case "scissors-idrock-id":
+                lose(userChoice, computerChoice);
+                break;
+            case "rock-idrock-id":
+            case "paper-idpaper-id":
+            case "scissors-idscissors-id":
+                draw(userChoice, computerChoice);
+                break;
+        }
     }
 }
 
